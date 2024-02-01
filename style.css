@@ -1,0 +1,61 @@
+/* Example CSS */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+
+header {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+footer {
+  background-color: #333;
+  color: #ffffff;
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+}
+
+main {
+  padding: 20px;
+  flex: 1;
+}
+
+#canvasContainer {
+  height: 600px; /* Adjust based on the size of your canvas or desired area */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#buttonContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px; /* Creates space between buttons */
+}
+
+.stock-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.stock-button:hover {
+  background-color: #0056b3;
+}
+
+
+
