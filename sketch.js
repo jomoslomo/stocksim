@@ -148,10 +148,9 @@ if (shares > 0 && portfolio[selectedStockIndex] && shares <= portfolio[selectedS
 
 function setup() {
   let cnv = createCanvas(600, 600); // Adjust canvas size as needed
-  scale(1.5);
   cnv.style('display', 'block'); // Ensures the canvas is block level for layout purposes
   cnv.parent('canvasContainer'); // Ensure this is correctly targeting your canvas container div
-
+  text("Cash: $" + userCash.toFixed(2), height/2, height - 10);
   initStocks();
 
   // Adjusted setup to place buttons on the side
@@ -192,7 +191,6 @@ function setup() {
 
 
 function draw() {
-  scale(1.5);
   background(220);
   updatePrices();
   displayStock();
