@@ -85,7 +85,7 @@ function displayStock() {
 function displayPortfolio() {
   fill(255);
   textAlign(LEFT);
-  text("User: " + userName + ", Cash: $" + userCash.toFixed(2), 10, height - 10);
+  text("Cash: $" + userCash.toFixed(2), 10, height - 10);
   let startY = height - 50;
   for (let i = 0; i < portfolio.length; i++) {
     let stock = portfolio[i];
@@ -153,7 +153,6 @@ function setup() {
   cnv.parent('canvasContainer'); // Ensure this is correctly targeting your canvas container div
 
   initStocks();
-  userName = prompt("Enter your name:");
 
   // Adjusted setup to place buttons on the side
   let buttonContainer = createDiv('');
@@ -170,7 +169,7 @@ function setup() {
   let prevStockButton = createButton('Previous Stock');
   let nextStockButton = createButton('Next Stock');
 
-  [buyButton, sellButton, prevStockButton, nextStockButton].forEach(button => {
+  [buyButton, sellButton, nextStockButton, prevStockButton].forEach(button => {
     button.parent(buttonContainer);
     button.addClass('stock-button'); // Use this class to style buttons
     button.mousePressed(() => {
